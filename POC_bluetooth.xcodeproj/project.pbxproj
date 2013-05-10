@@ -18,6 +18,20 @@
 		63A74BCB17375D8C00C618AA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BCA17375D8C00C618AA /* Default-568h@2x.png */; };
 		63A74BCE17375D8C00C618AA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BCC17375D8C00C618AA /* MainStoryboard.storyboard */; };
 		63A74BD117375D8C00C618AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A74BD017375D8C00C618AA /* ViewController.m */; };
+		63A74BDC1737876E00C618AA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BD81737876E00C618AA /* Icon-72.png */; };
+		63A74BDD1737876E00C618AA /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BD91737876E00C618AA /* Icon-72@2x.png */; };
+		63A74BE01737878400C618AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BDF1737878400C618AA /* Icon.png */; };
+		63A74BE21737878A00C618AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BE11737878A00C618AA /* Icon@2x.png */; };
+		63A74BE41739F9B700C618AA /* Siren.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BE31739F9B700C618AA /* Siren.wav */; };
+		63A74BE61739FC5B00C618AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A74BE51739FC5B00C618AA /* AudioToolbox.framework */; };
+		63A74BE81739FC6500C618AA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A74BE71739FC6500C618AA /* MediaPlayer.framework */; };
+		63A74BEA1739FC7600C618AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A74BE91739FC7600C618AA /* AVFoundation.framework */; };
+		63A74BEC173B8D1E00C618AA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A74BEB173B8D1E00C618AA /* CoreBluetooth.framework */; };
+		63A74BEF173B94D200C618AA /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A74BEE173B8D5600C618AA /* SerialGATT.m */; };
+		63A74BF2173BA31300C618AA /* img01_01_shinka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BF1173BA31300C618AA /* img01_01_shinka.jpg */; };
+		63A74BF4173BA6F400C618AA /* doomfaces.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BF3173BA6F400C618AA /* doomfaces.png */; };
+		63A74BF6173C91BB00C618AA /* DSPLDETH.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BF5173C91BB00C618AA /* DSPLDETH.WAV */; };
+		63A74BF8173C939F00C618AA /* DSSSSIT.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 63A74BF7173C939F00C618AA /* DSSSSIT.WAV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +51,21 @@
 		63A74BCD17375D8C00C618AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		63A74BCF17375D8C00C618AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		63A74BD017375D8C00C618AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63A74BD81737876E00C618AA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		63A74BD91737876E00C618AA /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		63A74BDF1737878400C618AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		63A74BE11737878A00C618AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		63A74BE31739F9B700C618AA /* Siren.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Siren.wav; sourceTree = "<group>"; };
+		63A74BE51739FC5B00C618AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		63A74BE71739FC6500C618AA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		63A74BE91739FC7600C618AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		63A74BEB173B8D1E00C618AA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		63A74BED173B8D5600C618AA /* SerialGATT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
+		63A74BEE173B8D5600C618AA /* SerialGATT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
+		63A74BF1173BA31300C618AA /* img01_01_shinka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img01_01_shinka.jpg; sourceTree = "<group>"; };
+		63A74BF3173BA6F400C618AA /* doomfaces.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doomfaces.png; sourceTree = "<group>"; };
+		63A74BF5173C91BB00C618AA /* DSPLDETH.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DSPLDETH.WAV; sourceTree = "<group>"; };
+		63A74BF7173C939F00C618AA /* DSSSSIT.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DSSSSIT.WAV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +73,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A74BEC173B8D1E00C618AA /* CoreBluetooth.framework in Frameworks */,
+				63A74BEA1739FC7600C618AA /* AVFoundation.framework in Frameworks */,
+				63A74BE81739FC6500C618AA /* MediaPlayer.framework in Frameworks */,
+				63A74BE61739FC5B00C618AA /* AudioToolbox.framework in Frameworks */,
 				63A74BB517375D8C00C618AA /* UIKit.framework in Frameworks */,
 				63A74BB717375D8C00C618AA /* Foundation.framework in Frameworks */,
 				63A74BB917375D8C00C618AA /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +106,10 @@
 		63A74BB317375D8C00C618AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63A74BEB173B8D1E00C618AA /* CoreBluetooth.framework */,
+				63A74BE91739FC7600C618AA /* AVFoundation.framework */,
+				63A74BE71739FC6500C618AA /* MediaPlayer.framework */,
+				63A74BE51739FC5B00C618AA /* AudioToolbox.framework */,
 				63A74BB417375D8C00C618AA /* UIKit.framework */,
 				63A74BB617375D8C00C618AA /* Foundation.framework */,
 				63A74BB817375D8C00C618AA /* CoreGraphics.framework */,
@@ -83,11 +120,14 @@
 		63A74BBA17375D8C00C618AA /* POC_bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				63A74BF0173BA2FD00C618AA /* Resources */,
 				63A74BC317375D8C00C618AA /* AppDelegate.h */,
 				63A74BC417375D8C00C618AA /* AppDelegate.m */,
 				63A74BCC17375D8C00C618AA /* MainStoryboard.storyboard */,
 				63A74BCF17375D8C00C618AA /* ViewController.h */,
 				63A74BD017375D8C00C618AA /* ViewController.m */,
+				63A74BED173B8D5600C618AA /* SerialGATT.h */,
+				63A74BEE173B8D5600C618AA /* SerialGATT.m */,
 				63A74BBB17375D8C00C618AA /* Supporting Files */,
 			);
 			path = POC_bluetooth;
@@ -96,6 +136,13 @@
 		63A74BBB17375D8C00C618AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63A74BF7173C939F00C618AA /* DSSSSIT.WAV */,
+				63A74BF5173C91BB00C618AA /* DSPLDETH.WAV */,
+				63A74BE31739F9B700C618AA /* Siren.wav */,
+				63A74BE11737878A00C618AA /* Icon@2x.png */,
+				63A74BDF1737878400C618AA /* Icon.png */,
+				63A74BD81737876E00C618AA /* Icon-72.png */,
+				63A74BD91737876E00C618AA /* Icon-72@2x.png */,
 				63A74BBC17375D8C00C618AA /* POC_bluetooth-Info.plist */,
 				63A74BBD17375D8C00C618AA /* InfoPlist.strings */,
 				63A74BC017375D8C00C618AA /* main.m */,
@@ -105,6 +152,15 @@
 				63A74BCA17375D8C00C618AA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63A74BF0173BA2FD00C618AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63A74BF3173BA6F400C618AA /* doomfaces.png */,
+				63A74BF1173BA31300C618AA /* img01_01_shinka.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +219,15 @@
 				63A74BC917375D8C00C618AA /* Default@2x.png in Resources */,
 				63A74BCB17375D8C00C618AA /* Default-568h@2x.png in Resources */,
 				63A74BCE17375D8C00C618AA /* MainStoryboard.storyboard in Resources */,
+				63A74BDC1737876E00C618AA /* Icon-72.png in Resources */,
+				63A74BDD1737876E00C618AA /* Icon-72@2x.png in Resources */,
+				63A74BE01737878400C618AA /* Icon.png in Resources */,
+				63A74BE21737878A00C618AA /* Icon@2x.png in Resources */,
+				63A74BE41739F9B700C618AA /* Siren.wav in Resources */,
+				63A74BF2173BA31300C618AA /* img01_01_shinka.jpg in Resources */,
+				63A74BF4173BA6F400C618AA /* doomfaces.png in Resources */,
+				63A74BF6173C91BB00C618AA /* DSPLDETH.WAV in Resources */,
+				63A74BF8173C939F00C618AA /* DSSSSIT.WAV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A74BEF173B94D200C618AA /* SerialGATT.m in Sources */,
 				63A74BC117375D8C00C618AA /* main.m in Sources */,
 				63A74BC517375D8C00C618AA /* AppDelegate.m in Sources */,
 				63A74BD117375D8C00C618AA /* ViewController.m in Sources */,
@@ -263,6 +329,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POC_bluetooth/POC_bluetooth-Prefix.pch";
 				INFOPLIST_FILE = "POC_bluetooth/POC_bluetooth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +341,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POC_bluetooth/POC_bluetooth-Prefix.pch";
 				INFOPLIST_FILE = "POC_bluetooth/POC_bluetooth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +366,7 @@
 				63A74BD617375D8C00C618AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
