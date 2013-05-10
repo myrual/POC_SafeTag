@@ -228,7 +228,7 @@
     self.signalFaceView.stopAnimating;
     self.signalFaceView.image = connectingImg;
     
-    [self playSound:@"DSSSSIT" :@"WAV"];
+    [self playSound:@"DSSSSIT" withExt:@"WAV"];
     self.scanButton.enabled = YES;
 }
 
@@ -367,17 +367,14 @@
     return newImage;
 }
 
--(void) playSound : (NSString *) fName : (NSString *) ext
+-(void) playSound:(NSString *)fName withExt:(NSString *)ext
 {
-    NSString *path  = [[NSBundle mainBundle] pathForResource : fName ofType :ext];
-    if ([[NSFileManager defaultManager] fileExistsAtPath : path])
-    {
-        NSURL *pathURL = [NSURL fileURLWithPath : path];
+    NSString *path  = [[NSBundle mainBundle] pathForResource:fName ofType:ext];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]){
+        NSURL *pathURL = [NSURL fileURLWithPath:path];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
         AudioServicesPlaySystemSound(audioEffect);
-    }
-    else
-    {
+    }else{
         NSLog(@"error, file not found: %@", path);
     }
 }
