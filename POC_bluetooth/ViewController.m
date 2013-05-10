@@ -148,7 +148,12 @@
     
     CBPeripheral *peripheral = [datas objectAtIndex:row];
     
-    cell.textLabel.text = peripheral.name;
+    //fake tag name
+    if([peripheral.name hasPrefix:@"BT"]){
+        cell.textLabel.text = @"SafeTag";
+    }else{
+        cell.textLabel.text = peripheral.name;
+    }
     
     if(selectedIndex == row){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -166,6 +171,7 @@
 - (IBAction)pressedScanButton:(id)sender {
     
     /*
+    //fake behavior
     [datas removeAllObjects];
     
     [self showMaskView:YES];
@@ -197,6 +203,7 @@
         });
     });
     */
+    
     NSLog(@"scan....");
     self.scanButton.enabled = NO;
     [self showMaskView:YES];
