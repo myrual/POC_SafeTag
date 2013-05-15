@@ -79,6 +79,7 @@
             NSLog(@"System Expiration End Background Task");
             [app endBackgroundTask:bgTask];
             bgTask = UIBackgroundTaskInvalid;
+            
         }];
         
         // Start the long-running task and return immediately.
@@ -95,7 +96,6 @@
             bgTask = UIBackgroundTaskInvalid;
             
         });
-        
     }
 
 }

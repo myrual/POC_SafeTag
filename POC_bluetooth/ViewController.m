@@ -80,7 +80,14 @@
 
 -(void) updatedRssiThresholdValue:(int)factor{
     failCount = 0;
-    threshold = -70;
+    if (factor==0) {
+        threshold = -70;
+    }else if(factor==1){
+        threshold = -75;
+    }else if(factor==2){
+        threshold = -85;
+    }
+    
     [thresholdRanges removeAllObjects];
     [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold+30)]];
     [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold+20)]];
