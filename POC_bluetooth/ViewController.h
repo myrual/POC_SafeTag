@@ -12,6 +12,7 @@
 
 @interface ViewController : UIViewController <BTSmartSensorDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UISlider *rssiSlider;
 @property (strong, nonatomic) IBOutlet UIImageView *signalFaceView;
 @property (strong, nonatomic) IBOutlet UILabel *hpLabel;
 @property (strong, nonatomic) IBOutlet UILabel *lifeLabel;
@@ -22,6 +23,8 @@
 @property (assign, nonatomic) AVAudioPlayer *avPlayer;
 
 @property (strong, nonatomic) SerialGATT *sensor;
+
+- (IBAction)sliderValueChanged:(UISlider*)sender;
 
 - (IBAction)pressedScanButton:(id)sender;
 

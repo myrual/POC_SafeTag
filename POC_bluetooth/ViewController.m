@@ -30,6 +30,9 @@
     int failCount;
     
     SystemSoundID audioEffect;
+    
+    int threshold;
+    NSMutableArray *thresholdRanges;
 }
 
 - (void)viewDidLoad
@@ -44,7 +47,8 @@
     datas = [[NSMutableArray alloc] init];
     selectedIndex = -1;
     
-    failCount = 0;
+    thresholdRanges = [[NSMutableArray alloc] init];
+    [self updatedRssiThresholdValue:0];
     
     const float width = 52.0f;
     const float height = 65.0f;
@@ -72,6 +76,16 @@
     
     self.hpLabel.text = @"HP:";
     self.lifeLabel.text = @"Life:";
+}
+
+-(void) updatedRssiThresholdValue:(int)factor{
+    failCount = 0;
+    threshold = -70;
+    [thresholdRanges removeAllObjects];
+    [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold+30)]];
+    [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold+20)]];
+    [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold+10)]];
+    [thresholdRanges addObject:[NSNumber numberWithInteger:(threshold)]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -167,6 +181,20 @@
 }
 
 #pragma mark - button actions
+
+- (IBAction)sliderValueChanged:(UISlider*)sender {
+    float value = [sender value];
+    
+    if(value > 1.5){
+        self.rssiSlider.value = 2;
+    }else if(value > 0.5){
+        self.rssiSlider.value = 1;
+    }else{
+        self.rssiSlider.value = 0;
+    }
+    
+    [self updatedRssiThresholdValue:self.rssiSlider.value];
+}
 
 - (IBAction)pressedScanButton:(id)sender {
     
@@ -304,7 +332,7 @@
 
         if(-70 > rssi){
             
-            if(failCount>6){
+            if(failCount>=7){
                 NSLog(@"play");
                 AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
                 [delegate playSiren];
@@ -321,16 +349,15 @@
         }
         
         //updated face
-        if(-50 <= rssi){
+        if([[thresholdRanges objectAtIndex:0] intValue] <= rssi){
             self.signalFaceView.image = connectedImg;
-        }else if(-70 > rssi){
+        }else if([[thresholdRanges objectAtIndex:3] intValue] > rssi){
             self.signalFaceView.image = state3Img;
-        }else if(-60 > rssi){
+        }else if([[thresholdRanges objectAtIndex:2] intValue] > rssi){
             self.signalFaceView.image = state2Img;
-        }else if(-50 > rssi){
+        }else if([[thresholdRanges objectAtIndex:1] intValue] > rssi){
             self.signalFaceView.image = state1Img;
         }
-        
         
         //update status
         self.hpLabel.text = [NSString stringWithFormat:@"HP:%i", (rssi+100)];
@@ -356,6 +383,7 @@
     [self setHpLabel:nil];
     [self setLifeLabel:nil];
     [self setScanButton:nil];
+    [self setRssiSlider:nil];
     [super viewDidUnload];
 }
 
