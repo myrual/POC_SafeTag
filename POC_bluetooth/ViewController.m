@@ -33,6 +33,8 @@
     
     int threshold;
     NSMutableArray *thresholdRanges;
+    
+    UIAlertView *alert;
 }
 
 - (void)viewDidLoad
@@ -76,6 +78,9 @@
     
     self.hpLabel.text = @"HP:";
     self.lifeLabel.text = @"Life:";
+    
+    alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Device is out of range." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
 }
 
 -(void) updatedRssiThresholdValue:(int)factor{
@@ -171,7 +176,7 @@
     
     //fake tag name
     if([peripheral.name hasPrefix:@"BT"]){
-        cell.textLabel.text = @"SafeTag";
+        cell.textLabel.text = @"SafeTag-C07HH0";
     }else{
         cell.textLabel.text = peripheral.name;
     }
@@ -343,6 +348,12 @@
                 NSLog(@"play");
                 AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
                 [delegate playSiren];
+                
+                
+                if(![alert isVisible]){
+                    [alert show];
+                }
+                
             }else{
                 failCount++;
             }
